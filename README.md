@@ -1,283 +1,137 @@
-# GenAI - AI Learning Repository
+# Machine Learning Training Assignment
 
-Welcome to **GenAI**, a comprehensive repository showcasing AI and Machine Learning implementations. This repo contains practical examples of how AI algorithms work, written in both Python and Java-style code.
+## Overview
 
-## 📁 Repository Structure
+This comprehensive assignment covers essential machine learning libraries and techniques in Python. It's structured into three main folders with practical, hands-on notebooks.
 
-```
-Genai/
-├── Python_ai/
-│   └── script.py          # Python AI implementations
-├── java_ai/
-│   └── script.py          # Java-style AI implementations
-└── README.md              # This file
-```
+## Folder Structure
 
-## 🤖 What's Inside?
+### 📊 **scikit_learn/**
+Fundamental machine learning algorithms and workflows using scikit-learn
+- `01_Introduction_to_Scikit_Learn.ipynb` - Getting started with scikit-learn
+  - Data loading and exploration
+  - Train-test split
+  - Feature scaling
+  - Classification models (Logistic Regression, Random Forest)
+  - Model evaluation metrics
 
-### 1. Python AI (`Python_ai/script.py`)
+- `02_Classification_Models.ipynb` - Comparing multiple classification algorithms
+  - Logistic Regression
+  - Decision Trees
+  - Random Forest
+  - Support Vector Machines (SVM)
+  - K-Nearest Neighbors (KNN)
+  - Gradient Boosting
+  - Performance comparison
 
-A Python implementation demonstrating fundamental AI concepts:
+### 🐼 **pandas/**
+Data manipulation and analysis techniques
+- `01_Data_Manipulation_Basics.ipynb` - Essential pandas operations
+  - Creating DataFrames
+  - Data exploration
+  - Selecting and filtering data
+  - Data cleaning
+  - Grouping and aggregation
 
-#### **SimpleNeuralNetwork Class**
-- Basic 3-layer neural network architecture
-- Forward propagation through hidden and output layers
-- Sigmoid activation function for non-linear transformations
-- Prediction capabilities for classification tasks
+- `02_Data_Analysis.ipynb` - Advanced data analysis
+  - Time series operations
+  - Pivot tables
+  - Merging DataFrames
+  - Visualization with pandas
 
-**Features:**
-- Customizable input, hidden, and output layer sizes
-- Random weight initialization
-- Forward pass computation with activation functions
+### 🤖 **ml/**
+Complete machine learning workflows and advanced techniques
+- `01_Complete_ML_Pipeline.ipynb` - End-to-end ML project
+  - Data loading and EDA
+  - Feature preprocessing
+  - Model training and evaluation
+  - Hyperparameter tuning with GridSearchCV
+  - Model comparison
+  - ROC curves and confusion matrices
 
-**Example:**
-```python
-nn = SimpleNeuralNetwork(input_size=3, hidden_size=4, output_size=2)
-prediction = nn.predict([0.1, 0.2, 0.3])  # Returns predicted class (0 or 1)
-```
+- `02_Feature_Engineering.ipynb` - Techniques to improve model performance
+  - Feature scaling (StandardScaler, MinMaxScaler)
+  - Polynomial features
+  - Categorical encoding (Label, One-Hot)
+  - Feature selection
+  - Dimensionality reduction (PCA)
 
-#### **SimpleAI Class**
-- Pattern recognition and learning system
-- Knowledge base for storing learned patterns
-- Similarity-based prediction with confidence scores
+- `03_Time_Series_Forecasting.ipynb` - Time series prediction
+  - Time series data generation
+  - Moving averages
+  - Feature engineering for time series
+  - Forecasting models
+  - Performance evaluation
 
-**Features:**
-- Learn from training data with `learn()` method
-- Recognize patterns in text using pattern matching
-- Make predictions with confidence scores
-- Handles unknown patterns gracefully
+## Learning Outcomes
 
-**Example:**
-```python
-ai = SimpleAI()
-ai.learn("hello friend", "greeting")
-prediction, confidence = ai.predict("hello world")  # Returns ("greeting", confidence_score)
-```
+After completing this assignment, you will be able to:
 
-**How it works:**
-1. Train the AI with labeled examples
-2. The system stores patterns in a knowledge base
-3. For predictions, it finds matching patterns and calculates similarity scores
-4. Returns the best match with confidence level
+✅ Load, explore, and preprocess data using pandas
+✅ Build and train machine learning models
+✅ Evaluate model performance using appropriate metrics
+✅ Perform feature engineering and selection
+✅ Tune hyperparameters using GridSearchCV
+✅ Compare different algorithms and choose the best one
+✅ Work with time series data and make forecasts
+✅ Visualize data and model results
 
----
-
-### 2. Java-Style AI (`java_ai/script.py`)
-
-Object-oriented AI implementations featuring classification algorithms:
-
-#### **Decision Tree Classifier**
-- Recursive tree building algorithm
-- Information gain calculation for optimal splits
-- Entropy-based node purity measurement
-- Configurable maximum depth
-
-**Features:**
-- Automatic feature and threshold selection
-- Builds optimal decision trees from training data
-- Predicts class labels for new samples
-- Prevents overfitting with depth limits
-
-**Example:**
-```python
-dt = DecisionTreeClassifier(max_depth=3)
-dt.fit(X_train, y_train)
-predictions = dt.predict(X_test)
-```
-
-**How it works:**
-1. Recursively splits data based on features that maximize information gain
-2. Each split reduces entropy (disorder) in the data
-3. Builds a tree structure where leaves represent class predictions
-4. Makes predictions by following the tree path for new data
-
-#### **K-Nearest Neighbors (KNN)**
-- Instance-based learning algorithm
-- Euclidean distance calculation
-- k-nearest neighbor voting mechanism
-- Configurable k parameter
-
-**Features:**
-- Simple yet effective classification
-- k neighbors vote on the predicted class
-- Uses Euclidean distance to find similar samples
-- No explicit training phase (lazy learning)
-
-**Example:**
-```python
-knn = KNearestNeighbors(k=3)
-knn.fit(X_train, y_train)
-predictions = knn.predict(X_test)
-```
-
-**How it works:**
-1. Calculates distance from test sample to all training samples
-2. Selects k closest neighbors
-3. Majority vote among k neighbors determines prediction
-4. Simple, intuitive, and effective for many datasets
-
----
-
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
-- Python 3.7 or higher
-- No external dependencies required (uses only built-in Python libraries)
-
-### Running the Examples
-
-#### Python AI Examples:
 ```bash
-cd Python_ai
-python script.py
+pip install numpy pandas scikit-learn matplotlib seaborn
 ```
 
-**Output includes:**
-- Pattern recognition predictions on test inputs
-- Confidence scores for each prediction
-- Neural network forward pass results
+### Running the Notebooks
+1. Clone/download this repository
+2. Install required packages (see above)
+3. Start with `scikit_learn/01_Introduction_to_Scikit_Learn.ipynb`
+4. Progress through each notebook sequentially
+5. Complete the exercises in each notebook
 
-#### Java-Style AI Examples:
-```bash
-cd java_ai
-python script.py
-```
+## Recommended Order
 
-**Output includes:**
-- Decision tree classifications
-- KNN predictions with majority voting
-- Performance on test datasets
+1. **Week 1**: Start with `scikit_learn/01_Introduction_to_Scikit_Learn.ipynb`
+2. **Week 1-2**: Complete `pandas/01_Data_Manipulation_Basics.ipynb`
+3. **Week 2**: Explore `scikit_learn/02_Classification_Models.ipynb`
+4. **Week 2-3**: Practice `pandas/02_Data_Analysis.ipynb`
+5. **Week 3**: Work through `ml/02_Feature_Engineering.ipynb`
+6. **Week 4**: Deep dive into `ml/01_Complete_ML_Pipeline.ipynb`
+7. **Week 4-5**: Explore time series with `ml/03_Time_Series_Forecasting.ipynb`
 
----
+## Assignment Submission
 
-## 📊 Algorithm Comparison
+✅ Complete all exercises in each notebook
+✅ Add your own analysis and observations
+✅ Create visualizations for key findings
+✅ Write a summary of what you learned
+✅ Submit as a completed Jupyter notebook or PDF report
 
-| Algorithm | Type | Complexity | Best For |
-|-----------|------|-----------|----------|
-| **Neural Network** | Deep Learning | O(n × m) | Complex patterns, non-linear data |
-| **SimpleAI** | Pattern Matching | O(n) | Text/pattern recognition |
-| **Decision Tree** | Supervised Learning | O(log n) | Interpretable decisions, small datasets |
-| **KNN** | Instance-based | O(n × d) | Simple datasets, fast learning |
+## Additional Resources
 
----
+- [Scikit-learn Official Documentation](https://scikit-learn.org/)
+- [Pandas Documentation](https://pandas.pydata.org/)
+- [Scikit-learn Cheat Sheet](https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html)
 
-## 🎯 Use Cases
+## Tips for Success
 
-### Pattern Recognition (Python AI)
-- Text classification
-- Sentiment analysis
-- Email spam detection
-- Content categorization
+💡 **Run each code cell** - Don't just read, execute!
+💡 **Experiment** - Modify code and see what happens
+💡 **Take notes** - Document your understanding
+💡 **Practice** - Repeat exercises multiple times
+💡 **Ask questions** - Don't hesitate to seek clarification
 
-### Classification (Java-Style AI)
-- Decision making systems
-- Data classification
-- Predictive modeling
-- Feature-based categorization
+## Evaluation Criteria
 
----
-
-## 📝 Code Examples
-
-### Example 1: Training SimpleAI for Greetings
-
-```python
-from Python_ai.script import SimpleAI
-
-# Create and train AI
-ai = SimpleAI()
-ai.learn("hello friend", "greeting")
-ai.learn("hi there", "greeting")
-ai.learn("goodbye see you", "farewell")
-ai.learn("bye take care", "farewell")
-
-# Make predictions
-prediction, confidence = ai.predict("hello world")
-print(f"Predicted: {prediction}, Confidence: {confidence:.2f}")
-```
-
-### Example 2: Decision Tree Classification
-
-```python
-from java_ai.script import DecisionTreeClassifier
-
-# Training data
-X_train = [[2.0, 3.0, 1.0], [7.0, 8.0, 2.0], ...]
-y_train = ["ClassA", "ClassB", ...]
-
-# Train and predict
-dt = DecisionTreeClassifier(max_depth=3)
-dt.fit(X_train, y_train)
-predictions = dt.predict([[3.0, 2.5, 1.1]])
-```
+- **Completion**: All notebooks completed ✓
+- **Understanding**: Clear explanation of concepts ✓
+- **Experimentation**: Attempts to modify and improve code ✓
+- **Visualization**: Clear and informative plots ✓
+- **Documentation**: Well-commented code ✓
 
 ---
 
-## 🔧 How AI Works (Simplified)
-
-### Training Process:
-1. **Data Collection**: Gather labeled training examples
-2. **Feature Extraction**: Identify important characteristics
-3. **Algorithm Selection**: Choose appropriate ML algorithm
-4. **Model Training**: Learn patterns from data
-5. **Validation**: Test on unseen data
-
-### Prediction Process:
-1. **Input**: Receive new data sample
-2. **Processing**: Extract features from input
-3. **Comparison**: Compare against learned patterns
-4. **Decision**: Make prediction based on similarities
-5. **Output**: Return predicted label with confidence
-
----
-
-## 📚 Learning Resources
-
-- **Neural Networks**: Understanding backpropagation and activation functions
-- **Decision Trees**: Information theory and entropy calculation
-- **KNN**: Distance metrics and lazy learning
-- **Pattern Recognition**: Text processing and similarity measures
-
----
-
-## 🤝 Contributing
-
-Feel free to enhance these implementations:
-- Add more algorithms (Random Forest, SVM, etc.)
-- Improve accuracy metrics
-- Add visualization capabilities
-- Expand documentation with more examples
-
----
-
-## 📄 License
-
-This repository is open for educational purposes.
-
----
-
-## ✨ Key Features
-
-✅ **Pure Python** - No heavy dependencies  
-✅ **Well-Documented** - Clear comments and examples  
-✅ **Educational** - Learn AI concepts from scratch  
-✅ **Practical** - Runnable examples included  
-✅ **Extensible** - Easy to modify and enhance  
-
----
-
-## 🎓 Learning Outcomes
-
-After exploring this repository, you'll understand:
-- ✓ How neural networks make predictions
-- ✓ Decision tree construction and splitting
-- ✓ K-Nearest Neighbors algorithm
-- ✓ Pattern recognition techniques
-- ✓ Machine learning workflow
-- ✓ Information theory basics (entropy, information gain)
-
----
-
-**Happy Learning! 🚀**
-
-*For questions or suggestions, feel free to contribute or open an issue.*
+**Last Updated**: July 2026
+**Course Level**: Beginner to Intermediate
+**Estimated Time**: 20-30 hours
